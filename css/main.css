@@ -97,7 +97,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+}
 /***** Base Header - Footer styles *****/
 
 header,
@@ -108,24 +111,38 @@ footer {
   flex-flow: row wrap;
 
 }
+header{
+  padding: 15px 0;
+}
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
 
+}
+.header-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0 20px 0;
 }
 header nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
 
 }
 header nav ul {
   display: flex;
   justify-content: center;
+  width: 100%;
 
+}
+footer {
+  flex-direction: column;
 }
 footer .social-icons {
   display: flex;
@@ -138,7 +155,16 @@ footer .social-icons p {
     justify-content: center;
     align-items: center;
 }
-
+footer .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
+}
+footer p {
+  margin: 0;
+}
+footer .copyright {
+  margin: 20px 0;
+}
 
 /***** MOBILE STYLES HOME PAGE *****/
 
@@ -148,12 +174,16 @@ footer .social-icons p {
   flex-flow: row wrap;
 
 }
+/***** ASIDE *****/
+
 aside {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-} 
+}
+
+/***** FEATURES *****/
 
 .features {
   display: flex;
@@ -161,20 +191,35 @@ aside {
   flex-flow: row wrap
 
 }
+.features h2 {
+  margin-bottom: 60px;
+}
+.features p {
+  margin: 0;
+}
+.features article {
+  width: 55%;
+  text-align: center;
+}
 
-.fontawesome-icon {
+.features .fontawesome-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-
 }
-
+/***** REVIEWS *****/
 .reviews {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-
+}
+.reviews h2 {
+  margin-bottom: 40px;
+}
+.reviews h3 {
+  width: 55%;
+  margin: 20px 0;
 }
 /***** ABOUT PAGE *****/
 .mission{
@@ -189,6 +234,9 @@ aside {
   align-items: center;
   flex-flow: row wrap;
 }
+.contact-content p {
+  margin: 0;
+}
 /***** FAQ PAGE *****/
 .faq {
   display: flex;
@@ -197,10 +245,18 @@ aside {
   flex-flow: row wrap;
 }
 .faq .content-wrapper {
+  margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+.faq h2 {
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  margin-bottom: 50px;
 }
 
 /* ==========================================================================
