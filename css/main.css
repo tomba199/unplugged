@@ -164,6 +164,7 @@ footer p {
 }
 footer .copyright {
   margin: 20px 0;
+  text-align: center;
 }
 
 /***** MOBILE STYLES HOME PAGE *****/
@@ -198,8 +199,8 @@ aside {
   margin: 0;
 }
 .features article {
-  width: 55%;
-  text-align: center;
+  width: 63%;
+  margin: 30px 0;
 }
 
 .features .features-items {
@@ -480,7 +481,51 @@ footer .copyright {
    
 
 @media only screen and (min-width: 1200px) {
+  /***** General styles *****/
+  .content-wrapper {
+    max-width: 960px;
+    
+  }
+  /***** Hero area *****/
+  .hero-area h1 {
+    width: 69%;
+  }
+  /***** Aside *****/
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
+  /***** Features *****/
+  .features h2 {
+    width: 88%;
+  }
+  .features article {
+    flex-basis: 33%;
   
+  }
+  /***** Reviews *****/
+  .reviews article div {
+    width: 42%;
+  }
+  /***** About Page *****/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+    width: 90%;
+  }
+  .contact-section .content-wrapper h2 {
+    margin-bottom: 100px;
+  }
+  /***** FAQ Page *****/
+  .faq h2 {
+    width: 100%;
+  }
+  .faq-content {
+    flex-basis: 44%;
+  }
+
 
 }
 /* ==========================================================================
