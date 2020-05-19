@@ -235,6 +235,9 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-image: url('img/hero-image.jpg') center no-repeat #333;
+  background-size: cover;
+  
 
 }
 .hero-area h1 {
@@ -364,9 +367,6 @@ input[type=button] {
   margin-bottom: 50px;
 }
 
-.faq-content h4 {
-  line-height: 1.333;
-}
 
 /* ==========================================================================
    Helper classes
