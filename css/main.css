@@ -153,6 +153,14 @@ address {
   width: 90%;
   margin: 50px 0;
 }
+
+img { 
+	width: 100%;
+}
+ 
+figure {
+  margin: 0;
+}
 /***** Base Header - Footer styles *****/
 
 header,
@@ -175,29 +183,38 @@ header .content-wrapper {
 
 }
 .header-divider {
-  background-color: #202322;
+  background-color: #292b2a;
   width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
 }
+header figure {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
 header nav{
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
-  color: #e2e3ed;
-  text-align: left;
-
 }
 header nav ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 header nav ul li {
-  font-size: 1.125em;
+  font-size: .93em;
+  font-weight: 700;
 }
 footer {
   flex-direction: column;
@@ -231,13 +248,16 @@ footer .copyright {
 
 /***** MOBILE STYLES HOME PAGE *****/
 
+
 .hero-area {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background-image: url('img/hero-image.jpg') center no-repeat #333;
+  background-image: url('../img/hero-image.jpg');
   background-size: cover;
-  
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
 
 }
 .hero-area h1 {
@@ -286,8 +306,11 @@ input[type=button] {
 .features {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap
-
+  flex-flow: row wrap;
+  background-image: url(../img/features-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .features h2 {
   margin-bottom: 60px;
@@ -315,7 +338,7 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background-color: #527158;
+  background-color: #2a423a;
 }
 .reviews h2 {
   margin-bottom: 40px;
@@ -365,6 +388,10 @@ input[type=button] {
 
 .faq-content {
   margin-bottom: 50px;
+}
+
+.faq-content h4 {
+  line-height: 1.333;
 }
 
 
@@ -464,6 +491,18 @@ input[type=button] {
     margin: 100px 0;
 }
 
+h2 {
+  font-size: 2.25em;
+  line-height: 1.333;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+
+
+
 /* Header */
 
 header {
@@ -475,6 +514,10 @@ header {
 header .content-wrapper {
   justify-content: space-between;
   width:100%;
+}
+
+header figure {
+  width: 30%;
 }
 
 header nav {
@@ -490,7 +533,17 @@ header nav ul {
     display: none;
 }
 
+
 /* Hero Area */
+.hero-area {
+  height: 600px;
+}
+
+.hero-area h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin: 0;
+}
 
 /* Aside */
 aside .content-wrapper {
@@ -518,9 +571,12 @@ aside .content-wrapper .form {
 }
 
 .features .features-item-description {
-  width: 50%; 
+  width: 60%; 
 }
 
+.features h2 {
+  margin-bottom: 20px;
+}
 /* Reviews */
 .reviews article {
   display: flex;
@@ -528,8 +584,18 @@ aside .content-wrapper .form {
 
 }
 
+.reviews h2 {
+  width: 85%;
+}
+
+.reviews article figure,
 .reviews article div {
     width: 49%;        
+}
+
+.reviews h3 {
+  width: 75%;
+  margin: 0;
 }
 
 /* Footer */
@@ -538,11 +604,20 @@ footer .content-wrapper {
     margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 
+}
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+footer p {
+    line-height: 1.285;
 }
 
 footer .contact {
@@ -573,6 +648,11 @@ footer .copyright {
   justify-content: space-between;
   align-items: flex-start;
 }
+
+.contact-content h4 {
+  font-size: 1.5em;
+}
+
 /***** FAQ *****/
 .faq .content-wrapper {
   justify-content: space-between;
@@ -585,19 +665,49 @@ footer .copyright {
 .faq h2 {
   width: 100%;
 }
+
+.faq h4,
+.faq p {
+  font-size: .875em;
+  line-height: 1.125;
+}
 }
    
 
 @media only screen and (min-width: 1200px) {
   /***** General styles *****/
+  header {
+    padding: 15px 0;
+  }
+  
+  .hero-area {
+    min-height: 775px;
+  }
+
   .content-wrapper {
     max-width: 960px;
-    
   }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
+  }
+  
   /***** Hero area *****/
   .hero-area h1 {
-    width: 69%;
-  }
+    font-size: 3.75em;
+    width: 80%;
+}
+
   /***** Aside *****/
   aside .content-wrapper {
     justify-content: space-around;
@@ -606,9 +716,13 @@ footer .copyright {
   aside .content-wrapper .form {
     width: 30%;
   }
+
+  .form-description p {
+    font-size: 1.125em;
+  }
   /***** Features *****/
   .features h2 {
-    width: 88%;
+    width: 90%;
   }
   .features article {
     flex-basis: 33%;
@@ -618,6 +732,14 @@ footer .copyright {
   .reviews article div {
     width: 42%;
   }
+
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
+
+  footer h4 {
+    font-size: 1.875em;
+  }
   /***** About Page *****/
   .mission h2,
   .contact-section .content-wrapper h2 {
@@ -626,12 +748,22 @@ footer .copyright {
   .contact-section .content-wrapper h2 {
     margin-bottom: 100px;
   }
+
+  .contact-content h4 {
+    font-size: 1.875em;
+  }
   /***** FAQ Page *****/
   .faq h2 {
     width: 100%;
   }
   .faq-content {
     flex-basis: 44%;
+  }
+
+  .faq h4,
+  .faq p {
+      font-size: 1.125em;
+      line-height: 1;
   }
 
 
